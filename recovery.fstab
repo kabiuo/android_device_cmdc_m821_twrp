@@ -23,10 +23,9 @@
 /misc		emmc	/dev/block/bootdevice/by-name/misc		flags=display="Misc";backup=1
 
 #/storage/sdcard1
-/storage/sdcard1	ext4	/dev/block/bootdevice/by-name/userdata	flags=display="External Storage";storage;wipeingui;removable
+#/storage/sdcard1	ext4	/dev/block/bootdevice/by-name/userdata	flags=display="External Storage";storage;wipeingui;removable
 
 #sdcard
-/sdcard			vfat	/dev/block/mmcblk1p1		flags=display="Sdcard";storage;wipeingui;removable
-
+/external_sd	auto	/dev/block/mmcblk1p1	 /dev/block/mmcblk1	 flags=display="Micro SDcard";storage;wipeingui;removable
 #usbotg
-/usb-otg           vfat      /dev/block/sda1            /dev/block/sda   flags=display="USB-OTG";storage;wipeingui;removable
+/usb-otg	auto	/dev/block/sda1	/dev/block/sda   flags=display="USB-OTG";storage;wipeingui;removable
